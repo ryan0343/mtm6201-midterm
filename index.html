@@ -1,6 +1,7 @@
 <!-- This will be the homepage of the website. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Document Information -->
     <meta charset="UTF-8">
@@ -9,35 +10,106 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Bella Olange</title>
 </head>
+
 <body>
     <div class="container">
         <header>
             <!-- Logo -->
+            <img src="images/logo-large.png" alt="">
             <!-- Nav here - Group so can be in hamburger -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <!-- Text Content for header here -->
-            <div>
-                <p>Food app</p>
-                <h1>Why stay hungry when 
-                    you can order form Bella Onojie</h1>
-                <h4>Download the bella onoje's food app now on</h4>
+            <!-- Header Content -->
+            <div class="mainHeader">
+                <!-- Text Content for header here -->
+                <div class="headerText">
+                    <p>Food app</p>
+                    <h1>Why stay hungry when
+                        you can order form Bella Onojie</h1>
+                    <h4>Download the bella onoje's food app now on</h4>
+                </div>
+
+                <!-- Button Pair -->
+                <div>
+                    <button class="buttonHeader buttonOran">Playstore</button>
+                    <button class="buttonHeader buttonClear">App Store</button>
+                </div>
             </div>
-            
-            <!-- Tilted Phone Pair -->
+            <!-- MAIN PHONE PAIR -->
             <div>
                 <img src="images/twophones.png" alt="">
             </div>
+            <!-- HOW APP WORKS & Divider SECTION -->
+            <div class = "appworks">
+                <p>How the App Works</p>
+                <hr>
+            </div>
 
+            <!-- MAIN CONTENT CARDS -->
+
+            <!-- ACCOUNT -->
+            <div class="card">
+                <!-- Card Text -->
+                <div>
+                    <h3>Create an account</h3>
+                    <h2>Create/login to an existing account to get started</h2>
+                    <h4>An account is created with your email and a desired password</h4>
+                </div>
+                <!-- Card Img -->
+                <img src="images/phone_login.png" alt="mobile login page of the app.">
+            </div>
+
+            <!-- SHOPPING -->
+            <div class="card">
+                <!-- Card Text -->
+                <div>
+                    <h3>Explore while shopping</h3>
+                    <h2>Shop for your favorites meal as they stay hot.</h2>
+                    <h4>Shop for your favorite meals or drinks and enjoy while doing it.</h4>
+                </div>
+                <!-- Card Img -->
+                <img src="images/phone_login.png" alt="mobile login page of the app.">
+            </div>
             
+            <!-- CHECKOUT -->
+            <div class="card">
+                <!-- Card Text -->
+                <div>
+                    <h3>Checkout</h3>
+                    <h2>When you're done, check out and get it delivered.</h2>
+                    <h4>When you done check out and get it delivered with ease.</h4>
+                </div>
+                <!-- Card Img -->
+                <img src="images/phone_login.png" alt="mobile login page of the app.">
+            </div>
+
+            <!-- DOWNLOAD APP NOW SECTION -->
+            <div class="Download">
+                <h2>Download the app now.</h2>
+                <h4>Most calendars are designed for teams. </h4>
+                <!-- Buttons -->
+                <div>
+                    <button class="buttonDownload buttonOran">Buy Now</button>
+                    <button class="buttonDownload buttonClear">Try for free</button>
+                </div>
+            </div>
         </main>
         <footer>
             <!-- Site Logo (hidden in mobile), Social Media SVGs -->
-            <img src="images/twitter.svg" alt="">
-            <img src="images/facebook-filled.svg" alt="">
-            <img src="images/instagram.svg" alt="">
+            <img src="images/twitter.svg" alt="Twitter link">
+            <img src="images/facebook-filled.svg" alt="Facebook link">
+            <img src="images/instagram.svg" alt="Instagram link">
             <p>Copywright 2020 Bella Onojie.com</p>
         </footer>
     </div>
 </body>
+
 </html>
