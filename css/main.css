@@ -1,3 +1,12 @@
 :root{
     --color-primary:#FA4A0C;
+    --color-grey: #737373;
+    --color-black: #252B42;
+    --color-divider: #E4E4E4;
+    --color-botbanner:#252B42;
+
+}
+
+html{
+    font-family: "Montserrat", sans-serif;
 }
