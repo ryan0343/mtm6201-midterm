@@ -1,12 +1,94 @@
+/* === VARIABLES AND GLOBAL VALUES === */
 :root{
     --color-primary:#FA4A0C;
+
     --color-grey: #737373;
+    --color-light-grey: #BDBDBD;
+
     --color-black: #252B42;
+    --color-white: #fff;
+    --color-offwhite: #FAFAFA;
+
     --color-divider: #E4E4E4;
     --color-botbanner:#252B42;
+    --color-transparent: #ffffff00;
+
+    --fontweight-reg: 500;
+    --fontweight-med: 600;
+    --fontweight-bold: 700;
 
 }
 
+/* === MOBILE CONTAINER STYLE === */
+.container {
+
+}
+
+/* === TEXT STYLE === */
 html{
     font-family: "Montserrat", sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: var(--fontweight-bold);
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4, h5 {
+    color: var(--color-grey);
+}
+
+h4 {
+    font-weight: var(--fontweight-reg);
+}
+
+h5 {
+    font-weight: var(--fontweight-bold);
+}
+
+/* === GLOBAL NAV STYLE === */
+.current{
+    color: var(--color-primary)
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list a{
+    font-weight: var(--fontweight-med);
+    text-decoration: none;
+}
+
+
+/* === MAIN HEADER CONTENT === */
+
+/* Lays out size and shape of banner  */
+.buttonHeader {
+    width: 236px;
+    height: 68px;
+    padding: 16px, 0px, 16px, 0px;
+    border-radius: 30px;
+    border: solid 1px var(--color-primary);
+}
+
+/* Styles orange buttons */
+.buttonOran {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Styles transparent buttons */
+.buttonClear {
+    background-color: var(--color-transparent);
+    color: var(--color-primary);
 }
