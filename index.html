@@ -9,7 +9,7 @@
     <!-- Font link Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Link to main stylesheet -->
     <link rel="stylesheet" href="css/main.css">
     <title>Bella Olange</title>
@@ -19,8 +19,15 @@
     <div class="container">
         <header>
             <!-- Logo -->
-            <img src="images/logo-large.png" alt="">
+            <img src="images/logo.png" alt="">
             <!-- Nav here - Group so can be in hamburger -->
+
+            <!-- SVG draws the Hamburger menu we use on mobile. -->
+            <svg class="hamburger" width="20" height="20" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M0.124103 1.33333C0.124103 0.596954 0.721057 0 1.45744 0H18.6667C19.403 0 20 0.596954 20 1.33333C20 2.06971 19.403 2.66667 18.6667 2.66667H1.45744C0.721056 2.66667 0.124103 2.06971 0.124103 1.33333ZM0 8C0 7.26362 0.596954 6.66667 1.33333 6.66667H18.6667C19.403 6.66667 20 7.26362 20 8C20 8.73638 19.403 9.33333 18.6667 9.33333H1.33333C0.596955 9.33333 0 8.73638 0 8ZM0 14.6667C0 13.9303 0.596953 13.3333 1.33333 13.3333H18.6667C19.403 13.3333 20 13.9303 20 14.6667C20 15.403 19.403 16 18.6667 16H1.33333C0.596953 16 0 15.403 0 14.6667Z" fill="#737373"/>
+            </svg>
+                
+
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="current">Home</a></li>
@@ -35,21 +42,21 @@
             <div class="mainHeader">
                 <!-- Text Content for header here -->
                 <div class="headerText">
-                    <p>Food app</p>
-                    <h1>Why stay hungry when
-                        you can order form Bella Onojie</h1>
+                    <h5>Food app</h5>
+                    <h2>Why stay hungry when
+                        you can order form Bella Onojie</h2>
                     <h4>Download the bella onoje's food app now on</h4>
                 </div>
 
                 <!-- Button Pair -->
                 <div>
-                    <button class="buttonHeader buttonOran">Playstore</button>
-                    <button class="buttonHeader buttonClear">App Store</button>
+                    <button class="buttonHeader buttonOran"><h3>Playstore</h3></button>
+                    <button class="buttonHeader buttonClear"><h3>App Store</h3></button>
                 </div>
             </div>
             <!-- MAIN PHONE PAIR -->
             <div>
-                <img src="images/twophones.png" alt="">
+                <img src="images/twophones-548_x_749.png" alt="">
             </div>
             <!-- HOW APP WORKS & Divider SECTION -->
             <div class = "appworks">
@@ -74,7 +81,7 @@
             <!-- SHOPPING -->
             <div class="card">
                 <!-- Card Text -->
-                <div>
+                <div class="cardText">
                     <h3>Explore while shopping</h3>
                     <h2>Shop for your favorites meal as they stay hot.</h2>
                     <h4>Shop for your favorite meals or drinks and enjoy while doing it.</h4>
@@ -86,7 +93,7 @@
             <!-- CHECKOUT -->
             <div class="card">
                 <!-- Card Text -->
-                <div>
+                <div class="cardText">
                     <h3>Checkout</h3>
                     <h2>When you're done, check out and get it delivered.</h2>
                     <h4>When you done check out and get it delivered with ease.</h4>
@@ -97,6 +104,7 @@
 
             <!-- DOWNLOAD APP NOW SECTION -->
             <div class="Download">
+                <!-- Download text -->
                 <h2>Download the app now.</h2>
                 <h4>Most calendars are designed for teams. </h4>
                 <!-- Buttons -->
