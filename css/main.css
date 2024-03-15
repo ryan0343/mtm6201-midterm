@@ -1,7 +1,7 @@
 /* === VARIABLES AND GLOBAL VALUES === */
-:root{
+:root {
     /* Sets Primary Colour */
-    --color-primary:#FA4A0C;
+    --color-primary: #FA4A0C;
 
     /* Greys */
     --color-grey: #737373;
@@ -14,8 +14,9 @@
     --color-white: #fff;
     --color-offwhite: #FAFAFA;
 
-    /* Miscellanious Colours */
-    --color-botbanner:#252B42;
+    /* Translucent Colours */
+    --color-botbanner: #252B4266;
+    --color-topbanner: #17101099;
     --color-transparent: #ffffff00;
     --color-grey-translucent: #73737389;
 
@@ -36,13 +37,15 @@
 }
 
 /* === TEXT STYLE === */
-html{
+html {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: var(--fontweight-bold);
 }
 
@@ -55,7 +58,8 @@ h3 {
     font-size: 1.5rem;
 }
 
-h4, h5 {
+h4,
+h5 {
     color: var(--color-grey);
 }
 
@@ -72,6 +76,28 @@ h5 {
 
 button {
     font-family: "Montserrat", sans-serif;
+}
+
+/* === ACCESSIBILITY === */
+/* Hides skip links when not tabbed. */
+.skip-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skip-links a {
+    position: absolute;
+    top: -3em;
+    background-color: black;
+    color: white;
+    padding: .5em 1em;
+    font-weight: bold;
+}
+
+/* Displays the skip links when user is focused on them. */
+.skip-links a:focus {
+    top: 0;
 }
 
 /*========================================================
@@ -115,7 +141,7 @@ button {
 }
 
 /* styles the links in the nav */
-.nav-list a{
+.nav-list a {
     width: 100%;
     font-weight: var(--fontweight-med);
     text-decoration: none;
@@ -123,7 +149,7 @@ button {
 }
 
 /* styles the Current page link the primary colour with the same priority as the colour given to all the links in the nav */
-.nav-list .current{
+.nav-list .current {
     color: var(--color-primary)
 }
 
@@ -138,9 +164,12 @@ button {
 }
 
 /* styles the hamburger menu and the nav-list items when hovered or focused on */
-.nav-list li:hover, .nav-list a:focus, .navbutton:hover, .navbutton:focus {
+.nav-list li:hover,
+.nav-list a:focus,
+.navbutton:hover,
+.navbutton:focus {
     background-color: var(--color-divider);
-    border: none;    
+    border: none;
 }
 
 /* === MAIN HEADER STYLES === */
@@ -217,7 +246,7 @@ button {
 }
 
 /* Styles "how the app works" */
-.appworks p{
+.appworks p {
     margin: 50px 0;
     font-weight: var(--fontweight-med);
     font-size: 24px;
@@ -278,6 +307,7 @@ hr {
     background-color: var(--color-black);
 }
 
+
 .download h2 {
     color: var(--color-white);
 }
@@ -295,7 +325,7 @@ hr {
 }
 
 /* organizes download button group */
-.download .buttons-group{
+.download .buttons-group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -348,7 +378,7 @@ footer .logo {
     height: 40px;
 }
 
-footer p{
+footer p {
     font-family: "Roboto", sans-serif;
     color: var(--color-grey-footer);
     padding: 0px, 10px, 0px, 10px;
@@ -359,7 +389,7 @@ footer p{
                     DESKTOP STYLES
  ==========================================================*/
 
- @media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
 
     /* === TEXT STYLE === */
 
@@ -384,6 +414,7 @@ footer p{
         display: flex;
     }
 
+    /* converts nav-list to a row */
     .nav-list {
         flex-direction: row;
         justify-content: space-between;
@@ -392,6 +423,53 @@ footer p{
     }
 
     /* === MAIN HEADER STYLES === */
+
+    .mainHeader-background {
+        background: var(--color-black) url(/images/header-background-1540.jpg) no-repeat center;
+    }
+
+    .mainHeader {
+        justify-content: center;
+        height: 619px;
+        color: var(--color-white);
+        background: var(--color-topbanner);
+    }
+
+    .headerText {
+        padding: 0;
+    }
+
+    .mainHeader h2 {
+        font-size: 3.625rem;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .mainHeader h4, .mainHeader h5 {
+        color: var(--color-white);
+        font-size: 1.5rem;
+    }
+
+    .mainHeader .buttons-group {
+        flex-direction: row;
+    }
+
+    .mainHeader .buttonClear {
+        color: var(--color-white);
+        border: solid 1px var(--color-white);
+    }
+
+    .twophones {
+        position: relative;
+        top: -120px;
+        right: 16px;
+    }
+    
+    /* reduces size of area after twophone because of movement upwards */
+    .twophone-div {
+        height: 575px;
+    }
+    
 
     /* swaps order of hr and appworks p */
     .appworks {
@@ -446,19 +524,33 @@ footer p{
         margin: 0;
     }
 
-    .cardText h4, .cardText h2 {
+    .cardText h4,
+    .cardText h2 {
         padding: 0;
     }
 
     /* === DOWNLOAD SECTION STYLES === */
 
     .download {
+        padding: 0;
+        background: var(--color-black) url(/images/download-app-background-1440_x_2174.jpg) no-repeat center;
+        width: 100%;
+    }
+
+    .download-content {
         height: 209px;
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: center;
-        background: var(--color-black) url(/images/download-app-background.jpg) no-repeat center;
+        align-items: center;
+        padding: 110px 24px 110px 24px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         gap: 20px;
+        background: var(--color-botbanner);
     }
 
     .download h4 {
@@ -496,4 +588,4 @@ footer p{
     footer p {
         align-self: center;
     }
- }
+}
