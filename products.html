@@ -8,7 +8,12 @@
     <!-- Font link Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Main font link -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Footer subtitle font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- How app works desktop font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <!-- Link to reset stylesheet -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Link to main stylesheet -->
@@ -21,34 +26,41 @@
 <body>
     <div class="container">
         <header>
-            <nav class="main-nav">
+            <!-- Skip links -->
+            <ul class="skip-links">
+                <li><a href="#main-nav">Skip to main nav</a></li>
+                <li><a href="#main-content">Skip to main content</a></li>
+            </ul>
+
+            <nav role="navigation" class="main-nav" id="main-nav">
                 <!-- Logo -->
                 <div class="nav-symbols">
                     <picture class="logo">
-                    <!-- Mobile Version -->
-                    <source srcset="
+                        <!-- Mobile Version -->
+                        <source srcset="
                 images/logo-104.png,
                 images/logo-208.png 2x,
                 images/logo-312.png 3x" media="(max-width: 620px)">
-                    <!-- Desktop Version -->
-                    <source srcset="
+                        <!-- Desktop Version -->
+                        <source srcset="
                 images/logo-206.png,
-                images/logo-208.png 2x,
-                images/logo-312.png 3x" media="(min-width: 620px)">
-                    <img src="images/logo-104.png" alt="">
-                </picture>
-                <!-- Use a favicon for out hamburger menu. -->
-                <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
-                    class="fa-solid fa-bars"></i></a>
+                images/logo-412.png 2x,
+                images/logo-618.png 3x" media="(min-width: 620px)">
+                        <img src="images/logo-104.png" alt="Bella Olange's logo">
+                    </picture>
+                    <!-- Use a favicon for out hamburger menu. -->
+                    <!-- hides/allows nav-list to reappear on click or select -->
+                    <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
+                            class="fa-solid fa-bars"></i></a>
                 </div>
                 <!-- Nav here - Group so can be in hamburger -->
                 <ul class="nav-list" id="nav-drop">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html" class="current">Product</a></li>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="products.html">Product</a></li>
                     <li><a href="faq.html">Faq</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                
+
             </nav>
         </header>
         <main>
@@ -73,6 +85,15 @@
         </main>
         <footer>
             <!-- Site Logo (hidden in mobile), Social Media SVGs -->
+            <picture class="logo">
+                <!-- Desktop Version -->
+                <source srcset="
+        images/logo-208.png,
+        images/logo-416.png 2x,
+        images/logo-624.png 3x" media="(min-width: 620px)">
+                <img src="images/logo-208.png" alt="Bella Olange's logo on the footer">
+            </picture>
+
             <div class="socialmedia">
                 <img src="images/twitter.svg" alt="Twitter link">
                 <img src="images/facebook-filled.svg" alt="Facebook link">
@@ -86,11 +107,15 @@
     <script>
         function myFunction() {
             var x = document.getElementById("nav-drop");
-            if (x.style.display === "block") {
+            if (window.screen.availWidth > 760) {
+                x.style.display = "flex";
+            } else if (x.style.display === "flex") {
                 x.style.display = "none";
             } else {
-                x.style.display = "block";
+                x.style.display = "flex";
             }
         }
     </script>
+    <!-- Had a bug with the above code; sometimes the menu will disappear completely if  -->
 </body>
+</html>
