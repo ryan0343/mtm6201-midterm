@@ -56,10 +56,24 @@
         </main>
         <footer>
             <!-- Site Logo (hidden in mobile), Social Media SVGs -->
-            <img class="footerLogo" src="images/logo-large.png" alt="">
-            <img src="images/twitter.svg" alt="Twitter link">
-            <img src="images/facebook-filled.svg" alt="Facebook link">
-            <img src="images/instagram.svg" alt="Instagram link">
-            <p>Copywright 2020 Bella Onojie.com</p>
+            <div class="socialmedia">
+                <img src="images/twitter.svg" alt="Twitter link">
+                <img src="images/facebook-filled.svg" alt="Facebook link">
+                <img src="images/instagram.svg" alt="Instagram link">
+            </div>
+
+            <p>Copyright &copy;Bella Onojie.com 2020</p>
         </footer>
+    </div>
+    <!-- JS allows Hamburger button to function -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav-drop");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
