@@ -7,6 +7,7 @@
     --color-grey: #737373;
     --color-light-grey: #BDBDBD;
     --color-divider: #E4E4E4;
+    --color-grey-footer: #5C5C5C;
 
     /* Black/White */
     --color-black: #252B42;
@@ -73,7 +74,12 @@ button {
     font-family: "Montserrat", sans-serif;
 }
 
-/* === MOBILE NAV STYLES === */
+/*========================================================
+                    MOBILE STYLES
+ ==========================================================*/
+
+
+/* === NAV STYLES === */
 
 /* Arranges nav items in a manner that they can remain in place while being called. */
 .main-nav {
@@ -101,7 +107,6 @@ button {
     width: 100%;
     list-style: none;
     flex-direction: column;
-
 }
 
 /* adds padding to nav list */
@@ -135,7 +140,7 @@ button {
 /* styles the hamburger menu and the nav-list items when hovered or focused on */
 .nav-list li:hover, .nav-list a:focus, .navbutton:hover, .navbutton:focus {
     background-color: var(--color-divider);
-    border: none    ;    
+    border: none;    
 }
 
 /* === MAIN HEADER STYLES === */
@@ -155,13 +160,25 @@ button {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Adds space above the header text */
+.headerText h2 {
+    line-height: var(--lineheight-h2)
 }
 
 /* moves twophones up into the Header Space */
 .twophones {
     position: relative;
-    top: -200px;
+    top: -150px;
     right: 16px;
+}
+
+/* reduces size of area after twophone because of movement upwards */
+.twophone-div {
+    height: 375px;
 }
 
 /* Displays the header buttons in a flex grid and centers them. */
@@ -199,6 +216,13 @@ button {
     border: solid 1px var(--color-primary);
 }
 
+/* Styles "how the app works" */
+.appworks p{
+    margin: 50px 0;
+    font-weight: var(--fontweight-med);
+    font-size: 24px;
+}
+
 /* Styles HR for Mobile */
 hr {
     border: solid 3px var(--color-divider);
@@ -209,6 +233,7 @@ hr {
 
 /* displays cards in flex and gives them a gap between */
 .contentcards {
+    margin: 60px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -223,21 +248,26 @@ hr {
     width: 90%;
 }
 
+/* styles h2 found in cards */
 .card h2 {
     line-height: var(--lineheight-h2);
 }
 
+/* styles h3 found in cards */
 .card h3 {
     color: var(--color-primary);
 }
 
+/* styles h4 found in cards */
 .card h4 {
     margin: 0 auto;
     width: 70%;
     line-height: var(--lineheight-h4);
 }
 
+/* Adds drop shadow and slight margin to all content images */
 .card-image {
+    margin: 20px 0;
     filter: drop-shadow(#2E040426 50px 30px 150px 0px);
 }
 
@@ -271,7 +301,12 @@ hr {
     justify-content: space-between;
     margin: 0 auto;
     width: 80%;
+    max-width: 340px;
     gap: 13px;
+}
+
+.d-text {
+    margin: 0 0 30px 0;
 }
 
 /* styles download clear CTA button */
@@ -296,6 +331,10 @@ footer {
     justify-content: center;
 }
 
+footer .logo {
+    display: none;
+}
+
 .socialmedia {
     display: flex;
     flex-direction: row;
@@ -304,7 +343,157 @@ footer {
     width: 170px;
 }
 
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+}
+
 footer p{
+    font-family: "Roboto", sans-serif;
+    color: var(--color-grey-footer);
     padding: 0px, 10px, 0px, 10px;
     font-size: 0.75rem;
 }
+
+/*========================================================
+                    DESKTOP STYLES
+ ==========================================================*/
+
+ @media screen and (min-width: 760px){
+
+    /* === TEXT STYLE === */
+
+    /* === NAV STYLES === */
+    .main-nav {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* gets rid of hambrug menu */
+    .navbutton {
+        display: none;
+    }
+
+    /* Shrinks nav-symbols down to allow nav list to fit */
+    .nav-symbols {
+        width: fit-content;
+    }
+
+    /* allows nav-list to display */
+    #nav-drop {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+        margin: 0 0;
+    }
+
+    /* === MAIN HEADER STYLES === */
+
+    /* swaps order of hr and appworks p */
+    .appworks {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Styles hr */
+    hr {
+        width: 60%;
+    }
+
+    /* Gives appworks alternate font */
+    .appworks p {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.75rem;
+    }
+
+    /* === CARD SECTION STYLES === */
+
+    .contentcards {
+        text-align: left;
+    }
+
+    .card {
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 70px;
+        /* left: 50%; */
+    }
+
+    .card-image {
+        margin: 0;
+    }
+
+    .contentcards .card:nth-child(odd) {
+        flex-direction: row-reverse;
+        margin: 0 auto;
+        /* right: 25%; */
+    }
+
+    .cardText {
+        width: 60%;
+        max-width: 568px;
+    }
+
+    .cardText h4 {
+        margin: 0;
+    }
+
+    .cardText h4, .cardText h2 {
+        padding: 0;
+    }
+
+    /* === DOWNLOAD SECTION STYLES === */
+
+    .download {
+        height: 209px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--color-black) url(/images/download-app-background.jpg) no-repeat center;
+        gap: 20px;
+    }
+
+    .download h4 {
+        color: var(--color-white);
+    }
+
+    .download .buttons-group {
+        width: 340px;
+        gap: 18px;
+    }
+
+    /* === FOOTER STYLES === */
+
+    footer {
+        width: 75%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .socialmedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 170px;
+        align-self: center;
+    }
+
+    footer .logo {
+        display: block;
+    }
+
+    footer p {
+        align-self: center;
+    }
+ }
