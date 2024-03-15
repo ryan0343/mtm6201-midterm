@@ -9,7 +9,12 @@
     <!-- Font link Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Main font link -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Footer subtitle font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- How app works desktop font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <!-- Link to reset stylesheet -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- Link to main stylesheet -->
@@ -26,21 +31,21 @@
                 <!-- Logo -->
                 <div class="nav-symbols">
                     <picture class="logo">
-                    <!-- Mobile Version -->
-                    <source srcset="
+                        <!-- Mobile Version -->
+                        <source srcset="
                 images/logo-104.png,
                 images/logo-208.png 2x,
                 images/logo-312.png 3x" media="(max-width: 620px)">
-                    <!-- Desktop Version -->
-                    <source srcset="
+                        <!-- Desktop Version -->
+                        <source srcset="
                 images/logo-206.png,
-                images/logo-208.png 2x,
-                images/logo-312.png 3x" media="(min-width: 620px)">
-                    <img src="images/logo-104.png" alt="">
-                </picture>
-                <!-- Use a favicon for out hamburger menu. -->
-                <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
-                    class="fa-solid fa-bars"></i></a>
+                images/logo-412.png 2x,
+                images/logo-618.png 3x" media="(min-width: 620px)">
+                        <img src="images/logo-104.png" alt="">
+                    </picture>
+                    <!-- Use a favicon for out hamburger menu. -->
+                    <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
+                            class="fa-solid fa-bars"></i></a>
                 </div>
                 <!-- Nav here - Group so can be in hamburger -->
                 <ul class="nav-list" id="nav-drop">
@@ -49,7 +54,7 @@
                     <li><a href="faq.html">Faq</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                
+
             </nav>
         </header>
         <main>
@@ -74,7 +79,7 @@
                 </div>
             </div>
             <!-- MAIN PHONE PAIR -->
-            <div>
+            <div class="twophone-div">
                 <picture class="twophones card-image">
                     <!-- Mobile Version -->
 
@@ -84,13 +89,9 @@
                     <img src="images/twophones-422.png" alt="">
                 </picture>
             </div>
-
-
-
-
             <!-- HOW APP WORKS & Divider SECTION -->
             <div class="appworks">
-                <p>How the App Works</p>
+                <p>How the app works</p>
                 <hr>
             </div>
 
@@ -118,7 +119,7 @@
                         <h4>Shop for your favorite meals or drinks and enjoy while doing it.</h4>
                     </div>
                     <!-- Card Img -->
-                    <img class="card-image" src="images/phone_login-278.png" alt="mobile login page of the app.">
+                    <img class="card-image" src="images/phone_d" alt="mobile login page of the app.">
                 </div>
 
                 <!-- CHECKOUT -->
@@ -130,12 +131,15 @@
                         <h4>When you done check out and get it delivered with ease.</h4>
                     </div>
                     <!-- Card Img -->
-                    <img class="card-image" src="images/phone_login-278.png" alt="mobile login page of the app.">
+                    <img class="card-image" src="images/phone_payment-278.png" alt="mobile login page of the app.">
                 </div>
                 <div class="card download">
                     <!-- Download text -->
-                    <h2>Download the app now.</h2>
+                    <div class="d-text">
+                        <h2>Download the app now.</h2>
                     <h4>Most calendars are designed for teams. </h4>
+                    
+                    </div>
                     <!-- Buttons -->
                     <div class="buttons-group">
                         <button class="buttonDownload buttonOran">Buy Now</button>
@@ -148,6 +152,15 @@
         </main>
         <footer>
             <!-- Site Logo (hidden in mobile), Social Media SVGs -->
+            <picture class="logo">
+                <!-- Desktop Version -->
+                <source srcset="
+        images/logo-208.png,
+        images/logo-416.png 2x,
+        images/logo-624.png 3x" media="(min-width: 620px)">
+                <img src="images/logo-208.png" alt="">
+            </picture>
+
             <div class="socialmedia">
                 <img src="images/twitter.svg" alt="Twitter link">
                 <img src="images/facebook-filled.svg" alt="Facebook link">
