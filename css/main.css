@@ -393,6 +393,7 @@ hr {
     width: 80%;
     margin: 0 auto;
     gap: 50px;
+    left: -32px;
 }
 
 .productGrid .card {
