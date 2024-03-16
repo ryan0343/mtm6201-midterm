@@ -106,8 +106,8 @@ button {
 
 /* === ANIMATION === */
 
-button:hover, button:focus {
-    transform: scale(1.05);
+button:hover, button:focus, .nav-list a:hover, .nav-list:focus {
+    transform: scale(1.15);
 }
 
 /*========================================================
@@ -184,7 +184,7 @@ button:hover, button:focus {
 .navbutton:focus {
     background-color: var(--color-divider);
     border: none;
-    transform: scale(1.1);  
+    transform: scale(1.5);  
 }
 
 
@@ -232,7 +232,7 @@ button:hover, button:focus {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;  
 }
 
 /* Lays out size and shape of header buttons */
@@ -341,15 +341,15 @@ hr {
         }
     }
 
-/* 
-    NOTE: Tried to get a slide in animation working on the cards as you scrolled by, it required more JS than I'd hoped it would.
-
-    makes content cards odd picture on left, while keeping the picture on the right
+    /* makes content cards odd picture on left, while keeping the picture on the right */
     .contentcards .card:nth-child(odd) {
         flex-direction: row-reverse;
         margin: 0 auto;
         right: 25%;
     }
+
+/* 
+    NOTE: Tried to get a slide in animation working on the cards as you scrolled by, it required more JS than I'd hoped it would.
 
     .contentcards .card:nth-child(odd) {
         animation: slide-in-right;
@@ -364,6 +364,13 @@ hr {
     .nav-list {
         animation: slide-in-left;
         animation-duration: 1s;
+    }
+
+
+    .round-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
     }
 
 /* === DOWNLOAD SECTION STYLES === */
@@ -451,6 +458,9 @@ footer text {
     font-size: 0.75rem;
 }
 
+/* === CONTACT FORM STYLES === */
+
+/* Adjusts for some spacing changes with the twophone image and the text above */
 
 @media screen and (min-width: 340px) {
     .twophones {
