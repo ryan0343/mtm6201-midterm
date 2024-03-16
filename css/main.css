@@ -33,6 +33,8 @@
 /* ===== MOBILE STYLES ===== */
 .container {
     width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
     background-color: var(--color-white);
 }
 
@@ -76,6 +78,8 @@ h5 {
 
 button {
     font-family: "Montserrat", sans-serif;
+    transform: scale(1);
+    transition: transform 0.5s;
 }
 
 /* === ACCESSIBILITY === */
@@ -100,6 +104,12 @@ button {
     top: 0;
 }
 
+/* === ANIMATION === */
+
+button:hover, button:focus {
+    transform: scale(1.05);
+}
+
 /*========================================================
                     MOBILE STYLES
  ==========================================================*/
@@ -111,7 +121,7 @@ button {
 .main-nav {
     padding: 17px 16px 17px 16px;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     overflow: hidden;
 }
 
@@ -138,6 +148,8 @@ button {
 /* adds padding to nav list */
 .nav-list li {
     padding: 15px;
+    transform: scale(1);
+    transition: transform 0.5s;
 }
 
 /* styles the links in the nav */
@@ -146,6 +158,8 @@ button {
     font-weight: var(--fontweight-med);
     text-decoration: none;
     color: var(--color-black);
+    transform: scale(1);
+    transition: transform 0.5s;
 }
 
 /* styles the Current page link the primary colour with the same priority as the colour given to all the links in the nav */
@@ -165,12 +179,15 @@ button {
 
 /* styles the hamburger menu and the nav-list items when hovered or focused on */
 .nav-list li:hover,
-.nav-list a:focus,
+.nav-list li:focus,
 .navbutton:hover,
 .navbutton:focus {
     background-color: var(--color-divider);
     border: none;
+    transform: scale(1.1);  
 }
+
+
 
 /* === MAIN HEADER STYLES === */
 
@@ -201,7 +218,6 @@ button {
 /* moves twophones up into the Header Space */
 .twophones {
     position: relative;
-    top: -150px;
     right: 16px;
 }
 
@@ -300,6 +316,56 @@ hr {
     filter: drop-shadow(#2E040426 50px 30px 150px 0px);
 }
 
+    /* Mainheader anim: slides in on first load */
+    @keyframes slide-in-right {
+        0% {
+            transform: translate(-100px);
+        }
+        80% {
+            transform: translate(1px);
+        }
+        100%{
+            transform: translate(0px);
+        }
+    }
+
+    @keyframes slide-in-left {
+        0% {
+            transform: translate(100px);
+        }
+        80% {
+            transform: translate(-1px);
+        }
+        100%{
+            transform: translate(0px);
+        }
+    }
+
+/* 
+    NOTE: Tried to get a slide in animation working on the cards as you scrolled by, it required more JS than I'd hoped it would.
+
+    makes content cards odd picture on left, while keeping the picture on the right
+    .contentcards .card:nth-child(odd) {
+        flex-direction: row-reverse;
+        margin: 0 auto;
+        right: 25%;
+    }
+
+    .contentcards .card:nth-child(odd) {
+        animation: slide-in-right;
+        animation-duration: 1.5s;
+    }
+
+    .contentcards .card:nth-child(even) {
+        animation: slide-in-left;
+        animation-duration: 1.5s;
+    } */
+
+    .nav-list {
+        animation: slide-in-left;
+        animation-duration: 1s;
+    }
+
 /* === DOWNLOAD SECTION STYLES === */
 
 .download {
@@ -378,12 +444,32 @@ footer .logo {
     height: 40px;
 }
 
-footer p {
+footer text {
     font-family: "Roboto", sans-serif;
     color: var(--color-grey-footer);
     padding: 0px, 10px, 0px, 10px;
     font-size: 0.75rem;
 }
+
+
+@media screen and (min-width: 340px) {
+    .twophones {
+        top: -120px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .twophones {
+        top: -150px;
+    }
+}
+
+@media screen and (min-width: 465px) {
+    .twophones {
+        top: -225px;
+    }
+}
+
 
 /*========================================================
                     DESKTOP STYLES
@@ -395,8 +481,11 @@ footer p {
 
     /* === NAV STYLES === */
     .main-nav {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        width: 80%;
+        overflow: visible;
     }
 
     /* gets rid of hambrug menu */
@@ -418,19 +507,21 @@ footer p {
     .nav-list {
         flex-direction: row;
         justify-content: space-between;
-        width: 40%;
+        align-items: center;
+        width: 50%;
         margin: 0 0;
     }
 
     /* === MAIN HEADER STYLES === */
 
     .mainHeader-background {
-        background: var(--color-black) url(/images/header-background-1540.jpg) no-repeat center;
+        background: var(--color-offwhite) url(/images/header-background-1540.jpg) no-repeat center;
     }
 
     .mainHeader {
         justify-content: center;
         height: 619px;
+        margin: 0 auto;
         color: var(--color-white);
         background: var(--color-topbanner);
     }
@@ -441,7 +532,7 @@ footer p {
 
     .mainHeader h2 {
         font-size: 3.625rem;
-        width: 60%;
+        width: 75%;
         margin: 0 auto;
     }
 
@@ -461,13 +552,13 @@ footer p {
 
     .twophones {
         position: relative;
-        top: -120px;
-        right: 16px;
+        top: -100px;
+        right: 100px;
     }
     
     /* reduces size of area after twophone because of movement upwards */
     .twophone-div {
-        height: 575px;
+        height: 675px;
     }
     
 
@@ -492,8 +583,10 @@ footer p {
 
     .contentcards {
         text-align: left;
+        gap: 100px;
     }
 
+    /* Styles cards for desktop and ensures minimum space */
     .card {
         width: 65%;
         margin: 0 auto;
@@ -501,18 +594,13 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 70px;
+        gap: 20px;
+        /* gap: 170px; */
         /* left: 50%; */
     }
 
     .card-image {
         margin: 0;
-    }
-
-    .contentcards .card:nth-child(odd) {
-        flex-direction: row-reverse;
-        margin: 0 auto;
-        /* right: 25%; */
     }
 
     .cardText {
@@ -531,12 +619,16 @@ footer p {
 
     /* === DOWNLOAD SECTION STYLES === */
 
+    /* styles background */
     .download {
         padding: 0;
         background: var(--color-black) url(/images/download-app-background-1440_x_2174.jpg) no-repeat center;
         width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
+    /* Styles text and overlay screen */
     .download-content {
         height: 209px;
         display: flex;
@@ -544,11 +636,11 @@ footer p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 110px 24px 110px 24px;
+        padding: 110px 0px 110px 0px;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        max-width: 1440px;
         gap: 20px;
         background: var(--color-botbanner);
     }
@@ -585,7 +677,40 @@ footer p {
         display: block;
     }
 
-    footer p {
+    .footerText {
         align-self: center;
+        align-items: center;
+    }
+}
+
+/* adjusts position of twophones due to h2 movement */
+@media screen and (min-width: 851px){
+    .twophones {
+        position: relative;
+        top: -100px;
+        right: 100px;
+    }
+}
+/* same as above */
+@media screen and (min-width: 867px){
+    .twophones {
+        position: relative;
+        top: -120px;
+    }
+}
+
+/* same as above */
+@media screen and (min-width: 1179px){
+    .twophones {
+        position: relative;
+        top: -120px;
+    }
+}
+
+/* same as above */
+@media screen and (min-width: 1190px){
+    .twophones {
+        position: relative;
+        top: -150px;
     }
 }
