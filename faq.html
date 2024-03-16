@@ -49,7 +49,6 @@
                         <img src="images/logo-104.png" alt="Bella Olange's logo">
                     </picture>
                     <!-- Use a favicon for out hamburger menu. -->
-                    <!-- hides/allows nav-list to reappear on click or select -->
                     <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
                             class="fa-solid fa-bars"></i></a>
                 </div>
@@ -63,7 +62,7 @@
 
             </nav>
         </header>
-        <main>
+        <main role="main" class="main-content" id="main-content">
             
         </main>
         <footer>
@@ -83,7 +82,10 @@
                 <img src="images/instagram.svg" alt="Instagram link">
             </div>
 
-            <p>Copyright &copy;Bella Onojie.com 2020</p>
+            <div class="footerText">
+                <p>Copyright &copy;Bella Onojie.com 2020</p>
+                <a class="skip-links" href="#top">Skip to top</a>
+            </div>
         </footer>
     </div>
     <!-- JS allows Hamburger button to function -->

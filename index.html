@@ -27,7 +27,13 @@
 <body>
     <div class="container">
         <header>
-            <nav class="main-nav">
+            <!-- Skip links -->
+            <ul class="skip-links">
+                <li><a href="#main-nav">Skip to main nav</a></li>
+                <li><a href="#main-content">Skip to main content</a></li>
+            </ul>
+
+            <nav role="navigation" class="main-nav" id="main-nav">
                 <!-- Logo -->
                 <div class="nav-symbols">
                     <picture class="logo">
@@ -41,11 +47,12 @@
                 images/logo-206.png,
                 images/logo-412.png 2x,
                 images/logo-618.png 3x" media="(min-width: 620px)">
-                        <img src="images/logo-104.png" alt="">
+                        <img src="images/logo-104.png" alt="Bella Olange's logo">
                     </picture>
                     <!-- Use a favicon for out hamburger menu. -->
+                    <!-- hides/allows nav-list to reappear on click or select -->
                     <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
-                            class="fa-solid fa-bars"></i></a>
+                            class="fa-solid fa-bars" alt="hamburger menu for main navigation"></i></a>
                 </div>
                 <!-- Nav here - Group so can be in hamburger -->
                 <ul class="nav-list" id="nav-drop">
@@ -57,36 +64,43 @@
 
             </nav>
         </header>
-        <main>
-            <!-- Header Content -->
-            <div class="mainHeader">
-                <!-- Text Content for header here -->
-                <div class="headerText">
-                    <h5>Food app</h5>
-                    <h2>Why stay hungry when
-                        you can order form Bella Onojie</h2>
-                    <h4>Download the bella onoje's food app now on</h4>
-                </div>
+        <main role="main" class="main-content" id="main-content">
+            <div class="mainHeader-background">
+                <!-- Header Content -->
+                <div class="mainHeader">
+                    <!-- Text Content for header here -->
+                    <div class="headerText">
+                        <h5>Food app</h5>
+                        <h2>Why stay hungry when
+                            you can order form Bella Onojie</h2>
+                        <h4>Download the bella onoje's food app now on</h4>
+                    </div>
 
-                <!-- Button Pair -->
-                <div class="buttons-group">
-                    <button class="buttonHeader buttonOran">
-                        <h3>Playstore</h3>
-                    </button>
-                    <button class="buttonHeader buttonClear">
-                        <h3>App Store</h3>
-                    </button>
+                    <!-- Button Pair -->
+                    <div class="buttons-group">
+                        <button class="buttonHeader buttonOran">
+                            <h3>Playstore</h3>
+                        </button>
+                        <button class="buttonHeader buttonClear">
+                            <h3>App Store</h3>
+                        </button>
+                    </div>
                 </div>
             </div>
+
             <!-- MAIN PHONE PAIR -->
             <div class="twophone-div">
-                <picture class="twophones card-image">
+                <picture class="twophones">
                     <!-- Mobile Version -->
-
+                    <source srcset="
+                        images/twophones-300.png" media="(max-width: 340px)">
+                    <source srcset="
+                        images/twophones-422.png" media="(max-width: 760px)">
                     <!-- Desktop Version -->
-
-
-                    <img src="images/twophones-422.png" alt="">
+                    <source srcset="
+                        images/twophones-shadow-648-test.png" media="(min-width: 760px)">
+                    <img src="images/twophones-shadow-648-test.png"
+                        alt="Two phones, left displays the app startup screen that reads 'food for everyone', while right shows the home page of the app.">
                 </picture>
             </div>
             <!-- HOW APP WORKS & Divider SECTION -->
@@ -107,7 +121,8 @@
                         <h4>An account is created with your email and a desired password</h4>
                     </div>
                     <!-- Card Img -->
-                    <img class="card-image" src="images/phone_login-278.png" alt="mobile login page of the app.">
+                    <img class="card-image" src="images/phone_login-278.png"
+                        alt="phone that displays the mobile login page of the app.">
                 </div>
 
                 <!-- SHOPPING -->
@@ -119,7 +134,16 @@
                         <h4>Shop for your favorite meals or drinks and enjoy while doing it.</h4>
                     </div>
                     <!-- Card Img -->
-                    <img class="card-image" src="images/phone_d" alt="mobile login page of the app.">
+                    <picture>
+                        <source srcset="
+                        images/phone_payment-278.png,
+                        images/phone_payment-556.png 2x,
+                        images/phone_payment-834.png 3x
+                        ">
+                        <img class="card-image" src="images/phone_delicious-straight.png"
+                            alt="phone showing the home page of the app, featuring a search bar and dishes you can scroll through.">
+                    </picture>
+
                 </div>
 
                 <!-- CHECKOUT -->
@@ -131,19 +155,32 @@
                         <h4>When you done check out and get it delivered with ease.</h4>
                     </div>
                     <!-- Card Img -->
-                    <img class="card-image" src="images/phone_payment-278.png" alt="mobile login page of the app.">
+                    <picture class="card-image">
+                        <!-- resolution changes -->
+                        <source srcset="
+                        images/phone_payment-278.png,
+                        images/phone_payment-556.png 2x,
+                        images/phone_payment-834.png 3x
+                        ">
+                        <img src="images/phone_payment-278.png"
+                            alt="phone showing the payment screen of the app, including payment and delivery method, total, and a confirm order button.">
+                    </picture>
+
                 </div>
-                <div class="card download">
-                    <!-- Download text -->
-                    <div class="d-text">
-                        <h2>Download the app now.</h2>
-                    <h4>Most calendars are designed for teams. </h4>
-                    
-                    </div>
-                    <!-- Buttons -->
-                    <div class="buttons-group">
-                        <button class="buttonDownload buttonOran">Buy Now</button>
-                        <button class="buttonDownload buttonClear">Try for free</button>
+                <div class="download">
+                    <!-- div allows for background -->
+                    <div class="download-content">
+                        <!-- Download text -->
+                        <div class="d-text">
+                            <h2>Download the app now.</h2>
+                            <h4>Most calendars are designed for teams. </h4>
+
+                        </div>
+                        <!-- Buttons -->
+                        <div class="buttons-group">
+                            <button class="buttonDownload buttonOran">Buy Now</button>
+                            <button class="buttonDownload buttonClear">Try for free</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,7 +195,7 @@
         images/logo-208.png,
         images/logo-416.png 2x,
         images/logo-624.png 3x" media="(min-width: 620px)">
-                <img src="images/logo-208.png" alt="">
+                <img src="images/logo-208.png" alt="Bella Olange's logo on the footer">
             </picture>
 
             <div class="socialmedia">
@@ -167,17 +204,27 @@
                 <img src="images/instagram.svg" alt="Instagram link">
             </div>
 
-            <p>Copyright &copy;Bella Onojie.com 2020</p>
+            <div class="footerText">
+                <p>Copyright &copy;Bella Onojie.com 2020</p>
+                <a class="skip-links" href="#top">Skip to top</a>
+            </div>
+
         </footer>
     </div>
-    <!-- JS allows Hamburger button to function -->
+
     <script>
+        // JS allows Hamburger button to function
         function myFunction() {
             var x = document.getElementById("nav-drop");
-            if (x.style.display === "block") {
+            // Detects screen width and displays if above screen width
+            if (window.screen.Width > 759) {
+                x.style.display = "flex";
+                // Hides if button is pressed
+            } else if (x.style.display === "flex") {
                 x.style.display = "none";
+                // returns if pressed again
             } else {
-                x.style.display = "block";
+                x.style.display = "flex";
             }
         }
     </script>
