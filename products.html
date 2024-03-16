@@ -51,7 +51,7 @@
                     <!-- Use a favicon for out hamburger menu. -->
                     <!-- hides/allows nav-list to reappear on click or select -->
                     <a class="navbutton" href="javascript:void(0);" onclick="myFunction()" onselect="myFunction()"><i
-                            class="fa-solid fa-bars"></i></a>
+                            class="fa-solid fa-bars" alt="hamburger menu for main navigation"></i></a>
                 </div>
                 <!-- Nav here - Group so can be in hamburger -->
                 <ul class="nav-list" id="nav-drop">
@@ -64,63 +64,74 @@
             </nav>
         </header>
         <main role="main" class="main-content" id="main-content">
+            <h2>Products</h2>
+
             <!-- Search bar. -->
 
             <!-- Categories. -->
-            <div>
-                <ul class="productCategories">
-                    <li><a href="">All</a></li>
-                    <li><a href="">Vegan</a></li>
-                    <li><a href="">Protein</a></li>
-                    <li><a href="">Egg</a></li>
+            <!-- <div>
+                <ul class="productCategories nav-list">
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Vegan</a></li>
+                    <li><a href="#">Protein</a></li>
+                    <li><a href="#">Egg</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="productGrid">
                 <!-- Products in cards. -->
                 <div class="card">
-                    <div class="round-image">
-                        <picture>
+                    <div>
+                        <picture class="round-image">
                             <source>
-                            <img src="images/food_tomatoveggie-600_x_588.png" alt="a plate of Veggie Tomato mix">
+                            <img class="round-image" src="images/food_tomatoveggie-300.png"
+                                alt="a plate of Veggie Tomato mix">
                         </picture>
                     </div>
-                    <div class="card-text">
-                        <h3 class="card-heading"></h3>
+                    <div class="cardText">
+                        <h3 class="card-heading">Tomato Veggie Mix</h3>
                         <p>Integer eu dictum ligula, iaculis dapibus neque. Orci varius natoque penatibus et magnis dis
                             parturient montes.</p>
-                        <a href=""></a>
+                        <button class="buttonOran buttonHeader">
+                            <h5>Try now!</h5>
+                        </button>
                     </div>
-                    
+
                 </div>
 
                 <div class="card">
-                    <div class="round-image">
-                        <picture>
+                    <div>
+                        <picture class="round-image">
                             <source>
-                            <img src="images/food_egg-cucumber.png" alt="a bowl of egg and cucumber salad">
+                            <img class="round-image" src="images/food_egg-cucumber-300.png"
+                                alt="a bowl of egg and cucumber salad">
                         </picture>
                     </div>
-                    <div class="card-text">
+                    <div class="cardText">
                         <h3 class="card-heading">Egg and Cucumber Salad</h3>
                         <p>Integer eu dictum ligula, iaculis dapibus neque. Orci varius natoque penatibus et magnis dis
                             parturient montes.</p>
-                        <a href=""></a>
+                        <button class="buttonOran buttonHeader">
+                            <h5>Try now!</h5>
+                        </button>
                     </div>
-                    
+
                 </div>
 
                 <div class="card">
-                    <div class="round-image">
-                        <picture>
+                    <div>
+                        <picture class="round-image">
                             <source>
-                            <img src="images/food_moi-moi-ekpa.png" alt="a plate of Moi-moi and Ekpa">
+                            <img class="round-image" src="images/food_moi-moi-ekpa-300.png"
+                                alt="a plate of Moi-moi and Ekpa">
                         </picture>
                     </div>
-                    <div class="card-text">
+                    <div class="cardText">
                         <h3 class="card-heading">Moi-moi and Ekpa</h3>
                         <p>Integer eu dictum ligula, iaculis dapibus neque. Orci varius natoque penatibus et magnis dis
                             parturient montes.</p>
-                        <a href=""></a>
+                        <button class="buttonOran buttonHeader">
+                            <h5>Try now!</h5>
+                        </button>
                     </div>
 
                 </div>
@@ -129,16 +140,19 @@
                     <div class="round-image">
                         <picture>
                             <source>
-                            <img src="images/food_friedchicken.png" alt="a plate of fried chicken">
+                            <img class="round-image" src="images/food_friedchicken-300.png"
+                                alt="a plate of fried chicken">
                         </picture>
                     </div>
-                    <div class="card-text">
+                    <div class="cardText">
                         <h3 class="card-heading">Fried Chicken</h3>
                         <p>Integer eu dictum ligula, iaculis dapibus neque. Orci varius natoque penatibus et magnis dis
                             parturient montes.</p>
-                        <a href=""></a>
+                        <button class="buttonOran buttonHeader">
+                            <h5>Try now!</h5>
+                        </button>
                     </div>
-                    
+
                 </div>
 
             </div>
