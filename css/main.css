@@ -576,7 +576,7 @@ footer text {
     /* === MAIN HEADER STYLES === */
 
     .mainHeader-background {
-        background: var(--color-offwhite) url(/images/header-background-1540.jpg) no-repeat center;
+        background: var(--color-offwhite) url(../images/header-background-1540.jpg) no-repeat center;
     }
 
     .mainHeader {
@@ -693,7 +693,7 @@ footer text {
     /* styles background */
     .download {
         padding: 0;
-        background: var(--color-black) url(/images/download-app-background-1440_x_2174.jpg) no-repeat center;
+        background: var(--color-black) url(../images/download-app-background-1440_x_2174.jpg) no-repeat center;
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
